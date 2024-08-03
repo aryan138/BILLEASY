@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="icon" href="./assets/logo.png">
+    <title>BILLEASE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <img id="logo" src="logo.png" alt="">
+                <div class="nav-option">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Home</a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
+                </div>
+            </div>
+            <div class="library">
+                <div class="options">
+                    <div class="lib-options nav-option sep">
+                        <img src="./Assests/library_icon.png" alt="Library Icon">
+                        <a href="#">Your Library</a>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="lib-box">
+                    <div class="box b">
+                        <div class="box-p1">Generate Your First Invoice</div>
+                        <div class="box-p2">It's simple, and we will guide you through the process</div>
+                        <button class="badge">Create Invoice</button>
+                    </div>
+                    <div class="box b">
+                        <div class="box-p1">Manage Your Clients</div>
+                        <div class="box-p2">Keep track of your clients' billing details effortlessly</div>
+                        <button class="badge">View Clients</button>
+                    </div>
+                    <div class="box b">
+                        <div class="box-p1">Track Your Payments</div>
+                        <div class="box-p2">Monitor and manage all your transactions in one place</div>
+                        <button class="badge">View Payments</button>
+                    </div>
+                    <div class="box b">
+                        <div class="box-p1">Get Detailed Reports</div>
+                        <div class="box-p2">Access comprehensive reports for better financial insights</div>
+                        <button class="badge">View Reports</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <nav>
+                <div class="sticky-nav">
+                    <div class="searchbar">
+                        <input type="text" name="search" placeholder="Search...">
+                        <span class="searchbar-icon"><i class="fas fa-search"></i></span>
+                    </div>
+                    <div>
+                        <ul>
+                            <img style="width: 3rem;height: 3rem;" src="./Assests/moon.png" alt="" id="icon">
+                            <li><a href="./login page/index.html"><button class="bu">Log In</button></a></li>
+                            <li><a href="./login page/index.html"></a><button class="bt">Sign Up</button></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            <div class="main-content">
+                <section class="hero">
+                    <div class="hero-content">
+                        <h1>Welcome to Smart Billing Management System</h1>
+                        <p>Streamline your billing and financial processes with ease.</p>
+                        <a href="#features" class="cta-button">Learn More</a>
+                    </div>
+                </section>
+
+                <section id="features" class="features">
+                    <h2>Our Features</h2>
+                    <div class="feature-list">
+                        <a href="./Admin Dashboard html css/index.html">
+                            <div class="feature-item">
+                                <h3>Inventory Management</h3>
+                                <p>Track inventory levels, orders, sales, and deliveries in real-time.</p>
+                            </div>
+                        </a>
+                        <a href="#inventory-options">
+                            <div class="feature-item">
+                                <h3>Dynamic Invoice Generator</h3>
+                                <p>Create customizable invoices with ease.</p>
+                            </div>
+                        </a>
+                        <div class="feature-item">
+                            <h3>Mailing and SMS System</h3>
+                            <p>Send invoices, payment reminders, and promotional messages automatically.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Payment Processing</h3>
+                            <p>Accept payments securely through various gateways.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Expense Tracker</h3>
+                            <p>Monitor and record business expenses with detailed reports.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Customer Data Store</h3>
+                            <p>Maintain a centralized database for client information and transaction history.</p>
+                        </div>
+                    </div>
+                    <div class="inventory" id="inventory">
+                        <h2>Spend less time managing your orders</h2>
+
+                        <div class="feature-list">
+                            <div class="feature-item hover-div-tracking">
+                                <h4>Track effectively</h4>
+                                <h3>Complete visibility for your items</h3>
+                                <p>Track different items across locations as they move through your inventory based
+                                    on
+                                    serial numbers and batches.</p>
+                            </div>
+                            <div class="feature-item hover-div">
+                                <h4>Scale efficiently</h4>
+                                <h3>Warehouse management</h3>
+                                <p>Initiate transfer orders, generate picklists, and dispatch orders from the
+                                    nearest
+                                    warehouse.</p>
+                            </div>
+                            <div class="feature-item hover-div-collaborate">
+                                <h4>Collaborate better</h4>
+                                <h3>Dedicated customer portal</h3>
+                                <p>Build stronger customer relationships with a dedicated space to view and manage
+                                    all
+                                    transactions, pay online, and initiate conversations.</p>
+                            </div>
+                        </div>
+
+                        <div class="image-div">
+                            <img id="image" src="./track-effectively.webp" alt="Image">
+                        </div>
+                    </div>
+                    <div class="inventory-options" id="inventory-options">
+                        <h2>Everything you need to manage your inventory operations</h2>
+                        <div class="inventory-features">
+                            <div class="text-button">
+                                <div class="text">
+                                    <h3>Inventory</h3>
+                                    <p>Tracking and controlling your inventory is a lot easier with the complete
+                                        inventory software that puts an end to stock mismatches and out-of-stock
+                                        situations.</p>
+                                </div>
+                                <div class="button"><button>SIGN UP- IT'S FREE</button></div>
+                            </div>
+                            <div class="inventory-feature">
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/manage-b.png" alt="">
+                                    <h3>Manage</h3>
+                                    <p>Sort items, create item groups and bundles, and centralize record keeping.</p>
+                                </div>
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/track.png" alt="">
+                                    <h3>Track</h3>
+                                    <p>Trace item movements and their expiry dates at any time.</p>
+                                </div>
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/control.png" alt="">
+                                    <h3>Control</h3>
+                                    <p>Set reorder points for items and make stock adjustments as you need.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment-text">
+
+                                <p>"We have been able to simplify our in-house inventory management with increased
+                                    efficiency and flexibility with Zoho Inventory."</p>
+
+                            </div>
+                            <div class="comment-person">
+                                <div class="post">
+                                    <p><b>Priyal Bafna,</b></p>
+                                    <p style="opacity: 0.8;padding: 0.2rem;margin-bottom: -0.5px;"> Senior Manager, </p>
+                                    <p style="opacity: 0.8;"> Finance, Rapido Bike, India</p>
+                                </div>
+                                <div class="imgc">
+                                    <img src="./Assests/rapidologo.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inventory-options" id="inventory-options">
+                        <div class="inventory-features">
+                            <div class="text-button">
+                                <div class="text">
+                                    <h3>Order</h3>
+                                    <p>Power your online sales with the comprehensive software to manage inventory that
+                                        lets you dedicate more time to growing your orders.</p>
+                                </div>
+                                <div class="button"><button>LEARN MORE</button></div>
+                            </div>
+                            <div class="inventory-feature">
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/manage-y.png" alt="">
+                                    <h3>Manage</h3>
+                                    <p>Manage your sales and purchase orders, and receive online payments without
+                                        hassles.</p>
+                                </div>
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/centralise.png" alt="">
+                                    <h3>Centralize</h3>
+                                    <p>Streamline your online sales across channels, and update stock levels centrally.
+                                    </p>
+                                </div>
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/fulfill.png" alt="">
+                                    <h3>Fulfil</h3>
+                                    <p>Simplify fulfillment by converting sales orders into packages and shipments in
+                                        one click.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment-text">
+
+                                <p>"Zoho Inventory has been amazing for us in collecting all of our online and offline
+                                    sales in one place."</p>
+
+                            </div>
+                            <div class="comment-person">
+                                <div class="post">
+                                    <p><b>Adam Petyt,</b></p>
+                                    <p style="opacity: 0.8;padding: 0.2rem;margin-bottom: -0.5px;"> Director, </p>
+                                    <p style="opacity: 0.8;"> Element Packaging, UK</p>
+                                </div>
+                                <div class="imgc" style="background-color: rgb(234, 208, 57); ">
+                                    <img src="./Assests/elementlogo.svg" alt="" style="border-radius: 0 0 1rem 0;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inventory-options" id="inventory-options">
+                        <div class="inventory-features">
+                            <div class="text-button">
+                                <div class="text">
+                                    <h3>Warehouse</h3>
+                                    <p>Eliminate the need for multiple spreadsheets with this end-to-end online
+                                        inventory management software that lets you manage different locations with
+                                        ease.
+
+                                    </p>
+                                </div>
+                                <div class="button"><button>LEARN MORE</button></div>
+                            </div>
+                            <div class="inventory-feature">
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/manage-g.png" alt="">
+                                    <h3>Oversee</h3>
+                                    <p>Handle stock across different locations and dispatch orders from your nearest
+                                        warehouse.</p>
+                                </div>
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/transfer.png" alt="">
+                                    <h3>Transfer</h3>
+                                    <p>Control stock flow among your warehouses by initiating transfer orders.
+                                    </p>
+                                </div>
+                                <div class="feature1">
+                                    <img class="i" src="./Assests/pick.png" alt="">
+                                    <h3>Pick</h3>
+                                    <p>Fulfill large orders hassle free by generating picklists for warehouse workers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment-text">
+
+                                <p>"With Zoho Inventory, managing stocks and returns across multiple warehouses has been
+                                    easier than expected."</p>
+
+                            </div>
+                            <div class="comment-person">
+                                <div class="post">
+                                    <p><b>Patrick Fletch,</b></p>
+                                    <p style="opacity: 0.8;padding: 0.2rem;margin-bottom: -0.5px;"> Director of B.D.,
+                                    </p>
+                                    <p style="opacity: 0.8;"> Alloygator Limited, USA</p>
+                                </div>
+                                <div class="imgc" style="background-color: rgb(24, 89, 133); ">
+                                    <img src="./Assests/alloygatorlogo.svg" alt="" style="border-radius: 0 0 1rem 0;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <p>&copy; 2024 Smart Billing Management System. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

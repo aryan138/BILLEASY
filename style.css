@@ -1,0 +1,781 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color1: #d3eff5;
+    --color2: BLACK;
+    --color3: #fff;
+    --color4: #ff6347;
+    --color5: #e55347;
+    --color7: #fff;
+    --color6: #87e2f2;
+}
+
+.dark-theme {
+    --color1: black;
+    --color2: #fff;
+    --color3: #333;
+    --color4: #ff6347;
+    --color5: #e55347;
+    --color6: #121212;
+    --color7: #232323;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--color1);
+    color: var(--color2);
+    overflow: hidden;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    animation: fadeIn 1s forwards;
+}
+
+.sidebar {
+    background-color: var(--color6);
+    width: 300px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    animation: slideIn 0.5s forwards 0.5s;
+}
+
+.main-content {
+    background-color: transparent;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1rem 1rem 1rem;
+    animation: contentFadeIn 1s forwards 1s;
+    /* Add padding for better spacing */
+}
+
+header {
+    background: var(--color3);
+    color: var(--color2);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    transform: scale(0.8);
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color4);
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: var(--color2);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color4);
+}
+
+.hero {
+    /* background-color: var(--color6); */
+    position: relative;
+    color: var(--color2);
+    text-align: center;
+    padding: 5rem 1rem;
+    /* border-radius: 1rem 1rem 0 0; */
+    /* Matching the border-radius for consistency */
+    overflow: hidden;
+    /* Ensures the pseudo-element is contained within the border radius */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('hero-bg.jpeg') no-repeat center center/cover;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    transform: translateY(20px);
+    animation: contentFadeIn 1s forwards 0.5s;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0 0 2.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+}
+
+.cta-button {
+    background-color: var(--color4);
+    /* Use background-color instead of background for solid color */
+    color: var(--color2);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 2rem;
+    /* Make the transition property match the background-color */
+}
+
+
+.cta-button:hover {
+    background: var(--color5);
+    transform: scale(1.1);
+}
+
+.features {
+    background: var(--color6);
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--color2);
+    /* Change to var(--color2) for consistency */
+    border-radius: 0 0 1rem 1rem;
+    /* Matching the border-radius for consistency */
+    transform: translateY(20px);
+    animation: contentFadeIn 1s forwards 1s;
+}
+
+.features a {
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* @media (min-width: 768px) {
+    .feature-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} */
+
+.feature-item {
+    background: var(--color7);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: start;
+    transition: box-shadow 0.3s, transform 0.3s;
+    /* box-shadow: 0 10px 10px rgba(229, 31, 31, 0.1); */
+}
+
+.feature-item:hover {
+    box-shadow: 0 5px 5px var(--color4);
+    transform: translateY(-10px);
+}
+
+.feature-item h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* padding: 1rem; */
+}
+
+.feature-item p {
+    opacity: 0.8;
+}
+
+.feature-item h4 {
+    color: var(--color5);
+}
+
+.inventory {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.inventory h2 {
+    margin-bottom: 3rem;
+}
+
+.inventory-options {
+    background: transparent;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--color2);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(20px);
+    animation: contentFadeIn 1s forwards 1.5s;
+}
+
+.inventory-options h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+.inventory-features {
+    height: 100%;
+    width: fit-content;
+    background: var(--color3);
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.comment {
+    height: 100%;
+    width: fit-content;
+    background-color: var(--color3);
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.comment-text {
+    margin: 2rem;
+    /* width: 50%; */
+    font-size: 22px;
+    color: var(--color2);
+    font-weight: 700;
+    text-align: start;
+    margin-right: 2rem;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.comment-person {
+    display: flex;
+}
+
+.post {
+    margin-top: 4rem;
+    text-align: start;
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(20px);
+    animation: contentFadeIn 1s forwards 2s;
+}
+
+.post p {
+    margin-bottom: 1rem;
+}
+
+.post b {
+    font-size: 25px;
+}
+
+.imgc {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 1rem 0;
+}
+
+.inventory-feature {
+    width: 100%;
+    background-color: var(--color3);
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inventory-feature p {
+    margin-top: 1rem;
+}
+
+
+.feature1 {
+    margin-right: 1rem;
+    text-align: start;
+}
+
+.feature1 p {
+    opacity: 0.8;
+}
+
+.i {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text-button {
+    width: 100%;
+    margin-right: 2rem;
+}
+
+/* .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
+.text h3 {
+    text-align: start;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+}
+
+.text p {
+    display: block;
+    text-align: start;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    opacity: 0.8;
+    line-height: 32px;
+}
+
+.button {
+    text-align: start;
+    margin-left: 1rem;
+}
+
+.button button {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    color: var(--color2);
+    background-color: var(--color5);
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button button:hover {
+    background-color: var(--color5);
+    transform: scale(1.1);
+}
+
+.footer-content {
+    background: var(--color3);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    color: var(--color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-nav ul {
+    transform: translateX(250px);
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav ul li a {
+    color: var(--color2);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: var(--color4);
+}
+
+/* Sidebar Styles */
+/* .nav {
+    background-color: rgb(14, 13, 13);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
+    padding: 0.5rem 0.75rem;
+} */
+
+.nav-option {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 30px;
+    padding: 0.5rem 0.75rem;
+    line-height: 2.5rem;
+    background-color: transparent;
+    /* opacity: 0.7; */
+    padding: 0.5rem;
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav img {
+    height: 2.6rem;
+    width: 10rem;
+    transform: translateY(0.5px);
+}
+
+.nav-option i {
+    transform: translateY(9px);
+    font-size: 1.25rem;
+    background-color: transparent;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    background-color: transparent;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.library {
+    background-color: var(--color6);
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-options img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    background-color: transparent;
+    display: flex;
+}
+
+.icons i {
+    /* opacity: 0.7; */
+    background-color: transparent;
+    margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box {
+    background-color: var(--color7);
+    height: 7rem;
+    border-radius: 0.75rem;
+    margin: 1rem 0.3rem 1rem 0;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.b {
+    height: 9rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    background-color: var(--color7);
+    font-weight: bolder;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    background-color: var(--color7);
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.badge {
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    border-radius: 100px;
+    padding: 0.2rem 1rem;
+    font-weight: 700;
+    margin: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.badge:hover {
+    background-color: var(--color4);
+    color: var(--color2);
+}
+
+.lib-box {
+    background-color: transparent;
+    overflow-y: auto;
+    /* This enables vertical scrolling */
+    max-height: 28rem;
+    /* Adjust the maximum height as per your design */
+}
+
+
+.sep {
+    display: flex;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--color1);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.316);
+}
+
+.bt {
+    background-color: var(--color4);
+    height: 2.5rem;
+    color: var(--color2);
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+    width: 6rem;
+    padding: 0.3rem;
+}
+
+.bu {
+    background-color: var(--color3);
+    height: 2.5rem;
+    color: var(--color2);
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+    width: 6rem;
+    padding: 0.3rem;
+}
+
+.bu:hover {
+    background-color: var(--color7);
+    color: var(--color2);
+}
+
+.bt:hover {
+    background-color: var(--color5);
+    color: var(--color2);
+}
+
+
+/* Sticky Navigation Styles */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    height: 3rem;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--color1);
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.sticky-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--color2);
+    /* Logo text color */
+}
+
+.sticky-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    /* transform: translateX(56rem); */
+}
+
+.sticky-nav ul li a {
+    color: var(--color2);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sticky-nav ul li a:hover {
+    color: var(--color4);
+    /* Hover color for nav links */
+}
+
+.sticky-nav .bt {
+    background-color: var(--color4);
+    color: var(--color2);
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+    width: 6rem;
+    padding: 0.3rem;
+    transition: background-color 0.3s;
+}
+
+.sticky-nav .bt:hover {
+    background-color: var(--color5);
+    color: var(--color2);
+}
+
+
+
+
+
+
+
+
+.searchbar {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.searchbar-icon {
+    position: absolute;
+    right: 27px;
+    top: 10px;
+    background-color: transparent;
+    color: var(--color5);
+    cursor: pointer;
+}
+
+input[type=text] {
+    padding: 9px 20px;
+    border: none;
+    margin: 0 14px;
+    font-size: 18px;
+    background-color: var(--color7);
+    text-align: left;
+    text-indent: 8px;
+    color: rgb(184, 179, 179);
+    outline: none;
+}
+
+.searchbar,
+input[type=text] {
+    border-radius: 30px;
+
+}
+
+
+
+
+
+.image-div img {
+    padding-top: 3rem;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width:1050px) {
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes contentFadeIn {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+}
+
+@media (max-width:1050px) {
+    .inventory-features {
+        flex-wrap: wrap;
+    }
+
+    .inventory-feature {
+        flex-wrap: wrap;
+    }
+
+    .comment {
+        flex-wrap: wrap;
+    }
+
+    .comment-person {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:800px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
